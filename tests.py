@@ -1,5 +1,5 @@
 from functions.get_files_info import get_files_info
-
+from functions.get_file_content import get_file_content
 
 def test():
     result = get_files_info("calculator", ".")
@@ -20,6 +20,8 @@ def test():
     result = get_files_info("calculator", "../")
     print("Result for '../' directory:")
     print(result)
+
+
 
 
 if __name__ == "__main__":
