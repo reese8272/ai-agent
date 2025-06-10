@@ -20,7 +20,22 @@ def test():
     result = get_files_info("calculator", "../")
     print("Result for '../' directory:")
     print(result)
+    print("")
 
+    result = get_file_content("calculator", "main.py")
+    print("Result for 'main.py' directory:")
+    print(result)
+    print("")
+
+    result = get_file_content("calculator", "pkg/calculator.py")
+    print("Result for 'pkg/calculator.py' directory:")
+    print(result)
+    print("")
+
+    result = get_file_content("calculator", "/bin/cat")
+    print("Result for '/bin/cat' directory:")
+    print(result)
+    print("")
 
 
 
