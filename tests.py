@@ -4,24 +4,13 @@ from functions.write_file import write_file
 from functions.run_python import run_python_file
 
 def test():
-    result = run_python_file("calculator", "main.py")
-    print("Result for calc, main.py")
+    result = get_files_info({'directory': '.'})
     print(result)
     print("")
 
-    result = run_python_file("calculator", "tests.py")
-    print("Result for calc, tests.py")
+    result = get_files_info({'directory': 'pkg'})
     print(result)
     print("")
-
-    result = run_python_file("calculator", "../main.py")
-    print("Result for calc, ../main.py, this should not be allowed")
-    print(result)
-    print("")
-
-    result = run_python_file("calculator", "nonexistent.py")
-    print("Result for calc, nonexistent.py, this should not be allowed")
-    print(result)
 
 
 
