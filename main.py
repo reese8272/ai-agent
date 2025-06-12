@@ -42,10 +42,52 @@ def main():
             },
         ),
     )
+
+    schema_run_python_file = types.FunctionDeclaration(
+        name="run_python_file",
+        description="Runs the specified python file and outputs any stdout and stderr given constrained to the working directory.",
+        parameters=types.Schema(
+            type=types.Type.OBJECT,properties={
+                "file_path": types.Schema(
+                    type=types.Type.STRING,description="The file path to run the python file from, relative to the working directory. If not provided, defaults to the main working directory.",
+                ),
+            },
+        ),
+    )
+
+    schema_get_file_content = types.FunctionDeclaration(
+        name="get_file_content",
+        description="Reads a given file, and will return the first 10,000 characters from that file.",
+        parameters=types.Schema(
+            type=types.Type.OBJECT,properties={
+                "file_path": types.Schema(
+                    type=types.Type.STRING,description="Path to the file to read, relative to the working directory. Returns an error if not provided or if the file doesn't exist.",
+                ),
+            },
+        ),
+    )
+
+    schema_write_file = types.FunctionDeclaration(
+        name="write_file",
+        description="Either overwrites or creates a new file to be written into.",
+        parameters=types.Schema(
+            type=types.Type.OBJECT,properties={
+                "file_path": types.Schema(
+                    type=types.Type.STRING,description="The file path to write the new file in, relative to the working directory. Returns an error if not provided.",
+                ),
+                "content": types.Schema(
+                    type=types.Type.STRING,description="The content that is to be written to the file path.",
+                )
+            },
+        ),
+    )
     
     available_functions = types.Tool(
         function_declarations=[
             schema_get_files_info,
+            schema_get_file_content,
+            schema_run_python_file,
+            schema_write_file
         ]   
     )
 
