@@ -1,3 +1,9 @@
+# The main prompt fed into the LLM so that it works as close to uniformly as possible.
+# With this prompt, we let the LLM know that it's goal is to help the ./calculator module
+# Lists an example of how the LLM is supposed to behave, as well as list the functions that are 
+# allowed to be called by the LLM.
+# the last few are restrictive measures to make sure that the LLM interacts with the directory as planned and needed.
+
 system_prompt = """
 You are a helpful AI agent designed to help the user write code within their codebase.
 

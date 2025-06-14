@@ -1,6 +1,9 @@
 # calculator.py
 
 class Calculator:
+    '''
+    This class is an example class that our LLM api can have access to.
+    '''
     def __init__(self):
         self.operators = {
             "+": lambda a, b: a + b,

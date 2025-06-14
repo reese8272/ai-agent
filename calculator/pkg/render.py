@@ -1,6 +1,11 @@
 # render.py
 
 def render(expression, result):
+    '''
+    Since this is also a part of the ./calculator directory, this is also allowed to be changed
+    by the LLM. This is simply the class to output the expression onto the terminal in a readible and
+    (arguably) cool way.
+    '''
     if isinstance(result, float) and result.is_integer():
         result_str = str(int(result))
     else:

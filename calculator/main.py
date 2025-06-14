@@ -6,6 +6,9 @@ from pkg.render import render
 
 
 def main():
+    '''
+    The main function of the ./calculator module.
+    '''
     calculator = Calculator()
     if len(sys.argv) <= 1:
         print("Calculator App")
