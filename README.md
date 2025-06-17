@@ -1,13 +1,15 @@
-🧠 AI-Agent
+# 🧠 AI-Agent
+
 An autonomous AI agent powered by the Gemini API. This system takes a user prompt, intelligently scans the codebase, selects valid functions, and iteratively attempts to complete the task until successful or until a maximum iteration limit is reached.
 
-🚀 How It Works
-You run the program via:
+---
 
-bash
-Copy
-Edit
-python3 main.py "generate some code for me"
+## 🚀 How It Works
+
+1. You run the program via:
+
+   ```bash
+   python3 main.py "generate some code for me"
 The agent:
 
 Analyzes the working directory for files it is allowed to modify.
@@ -25,21 +27,15 @@ The task is marked as complete, or
 It hits the maximum number of iterations.
 
 🧩 Key Components
-main.py: Entry point for the agent. Takes in your prompt and initiates the loop.
-
-call_function.py: Handles execution and validation of allowed function calls.
-
-prompts.py: Stores templates and system prompts for consistent agent guidance.
-
-functions/: Modular task-specific functions the agent can invoke.
-
-calculator/: An example submodule to show isolated function use.
-
-config.py: Holds environment settings like API key, directories, and iteration limit.
-
-tests.py: Basic unit tests to verify functionality.
-
-requirements.txt: List of dependencies. Install via pip install -r requirements.txt.
+File/Folder	Description
+main.py	Entry point for the agent. Takes in your prompt and initiates the loop.
+call_function.py	Handles execution and validation of allowed function calls.
+prompts.py	Stores templates and system prompts for consistent agent guidance.
+functions/	Modular task-specific functions the agent can invoke.
+calculator/	An example submodule to show isolated function use.
+config.py	Holds environment settings like API key, directories, and iteration limit.
+tests.py	Basic unit tests to verify functionality.
+requirements.txt	List of dependencies. Install via pip install -r requirements.txt.
 
 🛠️ Installation
 bash
